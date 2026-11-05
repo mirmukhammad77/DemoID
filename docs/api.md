@@ -18,7 +18,7 @@ Base: `http://127.0.0.1:3000/api`. All endpoints are POST. No authentication coo
 
 Success: **200** `{ "valid": true }`. This endpoint validates all fields and checks normalized-email availability without saving an account, password, or photo.
 
-`POST /registration/complete` accepts multipart form fields with the same five values and one file part named `photo`. The browser supplies a webcam JPEG. The API repeats profile validation and email uniqueness checks; it validates image bytes and exactly one face with DetectFaces, saves the private reference in MinIO, then commits the account.
+`POST /registration/complete` accepts multipart form fields with the same five values and one file part named `photo`. The browser supplies a webcam JPEG. The API repeats profile validation and email uniqueness checks; it validates image bytes and exactly one face through the private Python DeepFace service, saves the private reference in MinIO, then commits the account.
 
 Success: **201** `{ "message": "Registration complete" }`. A duplicate normalized email returns **409**. Storage/database/provider failures return **503**. An inserted-account failure triggers deletion of that attempt's object, with operator records if cleanup also fails.
 
@@ -30,7 +30,7 @@ Success: **200** `{ "valid": true }`. Unknown-email and wrong-password attempts 
 
 `POST /login/verify-face` accepts multipart `email`, `password`, and one `photo`. It checks credentials again before reference retrieval or biometric calls. The backend resolves the reference from those credentials; caller-supplied user identifiers or object keys are rejected. Prior frontend validation does not authorize this endpoint.
 
-Successful credentials and a face match at or above the configured threshold return **200**, with exactly this shape:
+Successful credentials and a single-face DeepFace comparison at or below the configured model-specific distance threshold return **200**, with exactly this shape:
 
 ```json
 {
@@ -65,9 +65,11 @@ The frontend retains email/password only in the current flow's memory so it can 
 | 409 | `EMAIL_CONFLICT` |
 | 413 | `IMAGE_TOO_LARGE`: image or request exceeds the limit |
 | 422 | `INVALID_FACE`: missing, multiple, or unusable detected faces |
-| 503 | `SERVICE_UNAVAILABLE`: database, private storage, missing reference, AWS access, timeout, throttling, or service failure |
+| 503 | `SERVICE_UNAVAILABLE`: database, private storage, missing/unusable reference, Python readiness/capacity, timeout, inference, or invalid provider-response failure |
 
 Email is trimmed/lowercased and limited to 254 characters. Names are trimmed and 1–100 characters. Passwords are 8–128 characters and never trimmed. Birth date must be a strict real past date in `YYYY-MM-DD` format. Unknown fields are rejected. Candidate images allow JPEG or PNG, matching MIME and byte signature, a full successful decode, a 20-million-pixel decode safety bound, and a 5,242,880-byte limit. Multipart allows one file and bounded field counts/lengths. Normal browser capture is resized to at most 1280 pixels on its longest edge.
+
+The browser calls only NestJS. Its services call the private [Python HTTP contract](../deepface-service/README.md) with image-only payloads. Enrollment and login require one detected face, and login also requires a usable single-face stored reference. Distance/model settings are server-owned; caller-supplied comparison settings are rejected as unknown fields. The pinned VGG-Face/OpenCV/cosine configuration defaults to distance threshold 0.68, unrelated to the removed AWS percentage threshold. Scores and model metadata remain internal.
 
 ## PowerShell request examples
 

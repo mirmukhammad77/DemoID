@@ -11,3 +11,7 @@ api/data/
 *.db
 *.db-*
 .verification/
+.venv/
+__pycache__/
+*.pyc
+.deepface/

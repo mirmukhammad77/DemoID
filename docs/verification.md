@@ -1,5 +1,7 @@
 ﻿# Verification record
 
+This is the historical AWS implementation record. Current architecture and DeepFace validation are recorded in [verification-deepface.md](verification-deepface.md).
+
 Implementation session: 2026-11-01. No automated tests, test files, or test framework dependencies were added. Checks below were performed using build commands, disposable local fixtures, HTTP requests, and headless-browser inspection. Temporary fixture data is excluded by `.gitignore`.
 
 ## Passed
