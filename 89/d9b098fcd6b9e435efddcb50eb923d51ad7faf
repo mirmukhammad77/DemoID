@@ -1,0 +1,147 @@
+.gitignore
+  s_60df538aa8e82e::t_7c06cb634113f5 14-17
+api/.env.example
+  s_60df538aa8e82e::t_7123efbb2ad002 11-12
+api/package.json
+  s_60df538aa8e82e::t_598e06acea5dee 10-11
+api/src/main.ts
+  s_60df538aa8e82e::t_60f17c354479df 4-7,24-29
+api/src/modules/biometrics/biometrics.module.ts
+  s_60df538aa8e82e::t_c3ce0b5738cbac 1-3,5
+api/src/modules/biometrics/biometrics.service.ts
+  s_60df538aa8e82e::t_100ed42922b98b 1-22
+api/src/modules/biometrics/clients/deepface.client.ts
+  s_60df538aa8e82e::t_1d0c32c38b896f 1-79
+api/src/modules/biometrics/types/deepface-result.type.ts
+  s_60df538aa8e82e::t_f3ae7bf8d43914 1-14
+api/src/modules/config/config.module.ts
+  s_60df538aa8e82e::t_1c1bfc35847703 1-6
+api/src/modules/config/config.service.ts
+  s_60df538aa8e82e::t_5fe18005316e10 1,14-15,17,32-36,47-48
+api/src/modules/database/data-source.ts
+  s_60df538aa8e82e::t_b03c173c5da6d3 5-6,11-22
+api/src/modules/database/database.module.ts
+  s_60df538aa8e82e::t_97def3b2291dfb 1-12
+api/src/modules/database/database.service.ts
+  s_60df538aa8e82e::t_06d8c4c6042a53 1,3,5,7-9
+api/src/modules/login/dtos/login.dto.ts
+  s_60df538aa8e82e::t_473a7690509845 1-3
+api/src/modules/login/login.controller.ts
+  s_60df538aa8e82e::t_e8a5de0a107e2c 1-19
+api/src/modules/login/login.module.ts
+  s_60df538aa8e82e::t_45db46fef81c29 1-11
+api/src/modules/login/login.service.ts
+  s_60df538aa8e82e::t_757290f8bf46a4 1-7,9-10,12-19,22
+api/src/modules/login/utils/profile.util.ts
+  s_60df538aa8e82e::t_2b37d706ee5945 1-5
+api/src/modules/registration/dtos/registration.dto.ts
+  s_60df538aa8e82e::t_03f02d90bf7e68 1-15
+api/src/modules/registration/registration.controller.ts
+  s_60df538aa8e82e::t_78eaab83a98c5c 1-19
+api/src/modules/registration/registration.module.ts
+  s_60df538aa8e82e::t_89b9465cf3d253 1-11
+api/src/modules/registration/registration.service.ts
+  s_60df538aa8e82e::t_dcf7208eb71cd8 1,3-15,18,20-22,24-31,34-37,40
+api/src/modules/registration/utils/enrollment-cleanup.util.ts
+  s_60df538aa8e82e::t_a6805cf4875859 1-8
+api/src/modules/registration/utils/trim.util.ts
+  s_60df538aa8e82e::t_425b69f6f95bdd 1-4
+api/src/modules/registration/validators/past-date.validator.ts
+  s_60df538aa8e82e::t_6703c60ce32eba 1-2,4,8-9
+api/src/modules/storage/storage.module.ts
+  s_60df538aa8e82e::t_70143e0fc2a758 1-5
+api/src/modules/storage/storage.service.ts
+  s_60df538aa8e82e::t_b7661027b3c0cc 1,4-6
+api/src/modules/users/users.module.ts
+  s_60df538aa8e82e::t_8c94aec09c827d 1-7
+api/src/modules/users/users.repository.ts
+  s_60df538aa8e82e::t_dcfcfe61d8c311 1-28
+api/src/modules/users/users.service.ts
+  s_60df538aa8e82e::t_76411fea024b55 1-3,5-6,9-13,15-19,21-24,27,29-31,33-36
+api/src/shared/dtos/credentials.dto.ts
+  s_60df538aa8e82e::t_04acc0c9c5b627 1-10
+api/src/shared/errors/application.error.ts
+  s_60df538aa8e82e::t_37d41e51faad39 1-18
+api/src/shared/filters/api-exception.filter.ts
+  s_60df538aa8e82e::t_177c9e49bebe0c 3-9,14-17,21-23,25-26,30-36
+api/src/shared/interceptors/photo-upload.interceptor.ts
+  s_60df538aa8e82e::t_76de7d6e2ae1a9 1-6
+api/src/shared/pipes/photo-validation.pipe.ts
+  s_60df538aa8e82e::t_6b2ce7e5c2a179 1,3-5,8-10,12,15-16,18,22-25
+api/src/shared/pipes/validation.pipe.ts
+  s_60df538aa8e82e::t_60304b0dcd8a35 1-12
+api/src/shared/types/credentials.type.ts
+  s_60df538aa8e82e::t_25c69685aafd42 1-4
+api/src/shared/types/validated-photo.type.ts
+  s_60df538aa8e82e::t_96ddf8c8181600 1-4
+api/src/shared/utils/photo.util.ts
+  s_60df538aa8e82e::t_6ed0b40633495b 1-2
+api/src/shared/utils/validation.util.ts
+  s_60df538aa8e82e::t_8134ab43becd23 1-4
+api/tsconfig.json
+  s_60df538aa8e82e::t_59f1707cc84f76 7,18-19
+deepface-service/app/services/inference_service.py
+  s_60df538aa8e82e::t_5adaccad9436c7 1-61
+deepface-service/requirements.txt
+  s_60df538aa8e82e::t_3de0e0c5f9ef29 1-38
+docs/architecture.md
+  s_60df538aa8e82e::t_f67199b771fb49 1-45
+openspec/changes/archive/2026-11-05-refactor-api-and-adopt-deepface/.openspec.yaml
+  s_60df538aa8e82e::t_5c5bfb1e2a7c20 1-2
+openspec/changes/archive/2026-11-05-refactor-api-and-adopt-deepface/tasks.md
+  s_60df538aa8e82e::t_7f7a11226c9e14 1-51
+package.json
+  s_60df538aa8e82e::t_a07aea971750ba 13
+scripts/dev.mjs
+  s_60df538aa8e82e::t_5dd86266ac1cc1 1-173
+README.md
+  s_60df538aa8e82e::t_5e7a45e7caa167 5-8,15,26-28,31,41,44-47,50,64-68,72,90,100
+deepface-service/.env.example
+  s_60df538aa8e82e::t_021907c8b9390b 1-10
+deepface-service/README.md
+  s_60df538aa8e82e::t_cea285b35f5ad6 1-63
+deepface-service/app/__init__.py
+  s_60df538aa8e82e::t_11df740eec5db2 1
+deepface-service/app/__main__.py
+  s_60df538aa8e82e::t_620ecae1a202c0 1-19
+deepface-service/app/main.py
+  s_60df538aa8e82e::t_883430ba7113f8 1-47
+deepface-service/app/prepare_models.py
+  s_60df538aa8e82e::t_d8d594c9f0853e 1-20
+deepface-service/app/settings.py
+  s_60df538aa8e82e::t_7673904a519c50 1-48
+docs/api.md
+  s_60df538aa8e82e::t_d8716f377bcca2 21,33,68,71-72
+docs/manual-verification.md
+  s_60df538aa8e82e::t_931f7f60afe3c7 3,8-9,19,28-29,40-49
+docs/verification-deepface.md
+  s_60df538aa8e82e::t_70177e377ce621 1-59
+docs/verification.md
+  s_60df538aa8e82e::t_989cc4b05be1b8 3-4
+openspec/changes/archive/2026-11-05-refactor-api-and-adopt-deepface/design.md
+  s_60df538aa8e82e::t_63f21fcd8abb0d 1-201
+openspec/changes/archive/2026-11-05-refactor-api-and-adopt-deepface/proposal.md
+  s_60df538aa8e82e::t_5b59df79fb424c 1-35
+openspec/changes/archive/2026-11-05-refactor-api-and-adopt-deepface/specs/biometric-login/spec.md
+  s_60df538aa8e82e::t_fc98ff45309acf 1-57
+openspec/changes/archive/2026-11-05-refactor-api-and-adopt-deepface/specs/development-runtime/spec.md
+  s_60df538aa8e82e::t_177612313f4678 1-57
+openspec/changes/archive/2026-11-05-refactor-api-and-adopt-deepface/specs/user-registration/spec.md
+  s_60df538aa8e82e::t_58f3b585bb8abf 1-39
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.18",
+  "base_commit_sha": "89d9b098fcd6b9e435efddcb50eb923d51ad7faf",
+  "prompts": {},
+  "sessions": {
+    "s_60df538aa8e82e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1ab3a-3a92-72f3-8938-7796a6a7f461",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Mirmuxammad <mirmuxammad@gmail.com>"
+    }
+  }
+}
